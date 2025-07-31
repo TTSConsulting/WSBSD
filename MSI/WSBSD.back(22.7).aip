@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<DOCUMENT Type="Advanced Installer" CreateVersion="22.7" version="22.9" Modules="enterprise" RootPath="." Language="en" Id="{57ACD742-394B-4568-A06D-0D2BBD456D99}">
+<DOCUMENT Type="Advanced Installer" CreateVersion="22.7" version="22.7" Modules="enterprise" RootPath="." Language="en" Id="{57ACD742-394B-4568-A06D-0D2BBD456D99}">
   <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
     <ROW Property="AI_FINDEXE_TITLE" Value="Select the installation package for [|ProductName]" ValueLocId="AI.Property.FindExeTitle"/>
@@ -12,7 +12,7 @@
     <ROW Property="ProductName" Value="WSBSD"/>
     <ROW Property="ProductVersion" Value="1.0.0.4" Options="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
-    <ROW Property="UpgradeCode" Value="{DEDBD413-4B40-434B-8CBC-E832E416E55A}"/>
+    <ROW Property="UpgradeCode" Value="{D02A6739-CB7F-42E0-AB01-B711A44EA755}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME#CDDVDBuild:Windows 9x/ME" ValueLocId="-"/>
     <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME#CDDVDBuild:Windows 9x/ME" ValueLocId="-"/>
     <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0#CDDVDBuild:Windows NT 4.0" ValueLocId="-"/>
@@ -61,8 +61,8 @@
     <ROW Component="Uninstall" ComponentId="{1A93BDD5-E21C-4D58-90BF-ED3B3A156F88}" Directory_="Uninstall_Dir" Attributes="0"/>
     <ROW Component="WSBSDDragonBSD6.4.2.exe" ComponentId="{0F6BE22A-09B5-4CAD-8870-CD082C156985}" Directory_="root_3_Dir" Attributes="0" Condition="INSTALL_FOLDER_TRIGGER = &quot;4&quot;" KeyPath="WSBSDDragonBSD6.4.2.exe"/>
     <ROW Component="WSBSDDragonBSD6.4.2.exe.config" ComponentId="{F8EBEEC3-624B-4575-8D3A-18B6A22DAC94}" Directory_="root_3_Dir" Attributes="0" Condition="INSTALL_FOLDER_TRIGGER = &quot;4&quot;" KeyPath="WSBSDDragonBSD6.4.2.exe.config" Type="0"/>
-    <ROW Component="WSBSDFreeBSD14.3.exe" ComponentId="{480B91A4-FA00-4804-831B-DDC878B183BE}" Directory_="root_Dir" Attributes="0" Condition="INSTALL_FOLDER_TRIGGER = &quot;1&quot;" KeyPath="WSBSDFreeBSD14.3.exe"/>
-    <ROW Component="WSBSDFreeBSD14.3.exe.config" ComponentId="{51DAC8E7-4B94-4E95-A5C7-8FD3DBB3DB8B}" Directory_="root_Dir" Attributes="0" Condition="INSTALL_FOLDER_TRIGGER = &quot;1&quot;" KeyPath="WSBSDFreeBSD14.3.exe.config" Type="0"/>
+    <ROW Component="WSBSDFreeBSDDefault14.2.exe" ComponentId="{840F8276-A6DD-40A3-A618-34380B41B180}" Directory_="root_Dir" Attributes="0" Condition="INSTALL_FOLDER_TRIGGER = &quot;1&quot;" KeyPath="WSBSDFreeBSDDefault14.2.exe"/>
+    <ROW Component="WSBSDFreeBSDDefault14.2.exe.config" ComponentId="{B49E86E0-B299-4788-8A6D-B05F75B4252F}" Directory_="root_Dir" Attributes="0" Condition="INSTALL_FOLDER_TRIGGER = &quot;1&quot;" KeyPath="WSBSDFreeBSDDefault14.2.exe.config" Type="0"/>
     <ROW Component="WSBSDMidnightBSD3.6.2.exe" ComponentId="{450A414F-1EC4-4E2A-8810-0D47712330A7}" Directory_="root_4_Dir" Attributes="0" Condition="INSTALL_FOLDER_TRIGGER = &quot;5&quot;" KeyPath="WSBSDMidnightBSD3.6.2.exe"/>
     <ROW Component="WSBSDMidnightBSD3.6.2.exe.config" ComponentId="{96B7F30C-84D1-47E1-B4FB-3E06BDF3178E}" Directory_="root_4_Dir" Attributes="0" Condition="INSTALL_FOLDER_TRIGGER = &quot;5&quot;" KeyPath="WSBSDMidnightBSD3.6.2.exe.config" Type="0"/>
     <ROW Component="WSBSDNetBSD10.1.exe" ComponentId="{8E83BB29-FB94-4BBA-B45A-E783689C8B7D}" Directory_="root_1_Dir" Attributes="0" Condition="INSTALL_FOLDER_TRIGGER = &quot;2&quot;" KeyPath="WSBSDNetBSD10.1.exe"/>
@@ -81,15 +81,15 @@
     <ROW File="WSBSDOpenBSD7.7.exe" Component_="WSBSDOpenBSD7.7.exe" FileName="WSBSDO~1.EXE|WSBSD OpenBSD 7.7.exe" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\WSBSD\BSDDISTROS\OpenBSD\7.7\root\WSBSD OpenBSD 7.7\WSBSD OpenBSD 7.7\bin\Debug\WSBSD OpenBSD 7.7.exe" SelfReg="false" DigSign="true"/>
     <ROW File="WSBSDOpenBSD7.7.exe.config" Component_="WSBSDOpenBSD7.7.exe.config" FileName="WSBSDO~1.CON|WSBSD OpenBSD 7.7.exe.config" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\WSBSD\BSDDISTROS\OpenBSD\7.7\root\WSBSD OpenBSD 7.7\WSBSD OpenBSD 7.7\bin\Debug\WSBSD OpenBSD 7.7.exe.config" SelfReg="false"/>
     <ROW File="WSBSDOpenBSD7.7.pdb" Component_="WSBSDOpenBSD7.7.exe" FileName="WSBSDO~1.PDB|WSBSD OpenBSD 7.7.pdb" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\WSBSD\BSDDISTROS\OpenBSD\7.7\root\WSBSD OpenBSD 7.7\WSBSD OpenBSD 7.7\bin\Debug\WSBSD OpenBSD 7.7.pdb" SelfReg="false"/>
+    <ROW File="WSBSDFreeBSDDefault14.2.exe" Component_="WSBSDFreeBSDDefault14.2.exe" FileName="WSBSDF~1.EXE|WSBSD FreeBSD Default (14.2).exe" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\WSBSD\BSDDISTROS\FreeBSD\root\WSBSD FreeBSD Default (14.2)\WSBSD FreeBSD Default (14.2)\bin\Debug\WSBSD FreeBSD Default (14.2).exe" SelfReg="false" DigSign="true"/>
+    <ROW File="WSBSDFreeBSDDefault14.2.exe.config" Component_="WSBSDFreeBSDDefault14.2.exe.config" FileName="WSBSDF~1.CON|WSBSD FreeBSD Default (14.2).exe.config" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\WSBSD\BSDDISTROS\FreeBSD\root\WSBSD FreeBSD Default (14.2)\WSBSD FreeBSD Default (14.2)\bin\Debug\WSBSD FreeBSD Default (14.2).exe.config" SelfReg="false"/>
+    <ROW File="WSBSDFreeBSDDefault14.2.pdb" Component_="WSBSDFreeBSDDefault14.2.exe" FileName="WSBSDF~1.PDB|WSBSD FreeBSD Default (14.2).pdb" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\WSBSD\BSDDISTROS\FreeBSD\root\WSBSD FreeBSD Default (14.2)\WSBSD FreeBSD Default (14.2)\bin\Debug\WSBSD FreeBSD Default (14.2).pdb" SelfReg="false"/>
     <ROW File="WSBSDDragonBSD6.4.2.exe" Component_="WSBSDDragonBSD6.4.2.exe" FileName="WSBSDD~1.EXE|WSBSD DragonBSD 6.4.2.exe" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\WSBSD\BSDDISTROS\DragonFly\6.4.2\root\WSBSD DragonBSD 6.4.2\WSBSD DragonBSD 6.4.2\bin\Debug\WSBSD DragonBSD 6.4.2.exe" SelfReg="false" DigSign="true"/>
     <ROW File="WSBSDDragonBSD6.4.2.exe.config" Component_="WSBSDDragonBSD6.4.2.exe.config" FileName="WSBSDD~1.CON|WSBSD DragonBSD 6.4.2.exe.config" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\WSBSD\BSDDISTROS\DragonFly\6.4.2\root\WSBSD DragonBSD 6.4.2\WSBSD DragonBSD 6.4.2\bin\Debug\WSBSD DragonBSD 6.4.2.exe.config" SelfReg="false"/>
     <ROW File="WSBSDDragonBSD6.4.2.pdb" Component_="WSBSDDragonBSD6.4.2.exe" FileName="WSBSDD~1.PDB|WSBSD DragonBSD 6.4.2.pdb" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\WSBSD\BSDDISTROS\DragonFly\6.4.2\root\WSBSD DragonBSD 6.4.2\WSBSD DragonBSD 6.4.2\bin\Debug\WSBSD DragonBSD 6.4.2.pdb" SelfReg="false"/>
     <ROW File="WSBSDMidnightBSD3.6.2.exe" Component_="WSBSDMidnightBSD3.6.2.exe" FileName="WSBSDM~1.EXE|WSBSD MidnightBSD 3.6.2.exe" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\WSBSD\BSDDISTROS\MidnightBSD\3.2.3\root\WSBSD MidnightBSD 3.6.2\WSBSD MidnightBSD 3.6.2\bin\Debug\WSBSD MidnightBSD 3.6.2.exe" SelfReg="false" DigSign="true"/>
     <ROW File="WSBSDMidnightBSD3.6.2.exe.config" Component_="WSBSDMidnightBSD3.6.2.exe.config" FileName="WSBSDM~1.CON|WSBSD MidnightBSD 3.6.2.exe.config" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\WSBSD\BSDDISTROS\MidnightBSD\3.2.3\root\WSBSD MidnightBSD 3.6.2\WSBSD MidnightBSD 3.6.2\bin\Debug\WSBSD MidnightBSD 3.6.2.exe.config" SelfReg="false"/>
     <ROW File="WSBSDMidnightBSD3.6.2.pdb" Component_="WSBSDMidnightBSD3.6.2.exe" FileName="WSBSDM~1.PDB|WSBSD MidnightBSD 3.6.2.pdb" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\WSBSD\BSDDISTROS\MidnightBSD\3.2.3\root\WSBSD MidnightBSD 3.6.2\WSBSD MidnightBSD 3.6.2\bin\Debug\WSBSD MidnightBSD 3.6.2.pdb" SelfReg="false"/>
-    <ROW File="WSBSDFreeBSD14.3.exe" Component_="WSBSDFreeBSD14.3.exe" FileName="WSBSDF~1.EXE|WSBSD FreeBSD 14.3.exe" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\WSBSD\BSDDISTROS\FreeBSD\root\WSBSD FreeBSD 14.3\WSBSD FreeBSD 14.3\bin\Debug\WSBSD FreeBSD 14.3.exe" SelfReg="false" DigSign="true"/>
-    <ROW File="WSBSDFreeBSD14.3.exe.config" Component_="WSBSDFreeBSD14.3.exe.config" FileName="WSBSDF~1.CON|WSBSD FreeBSD 14.3.exe.config" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\WSBSD\BSDDISTROS\FreeBSD\root\WSBSD FreeBSD 14.3\WSBSD FreeBSD 14.3\bin\Debug\WSBSD FreeBSD 14.3.exe.config" SelfReg="false"/>
-    <ROW File="WSBSDFreeBSD14.3.pdb" Component_="WSBSDFreeBSD14.3.exe" FileName="WSBSDF~1.PDB|WSBSD FreeBSD 14.3.pdb" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\WSBSD\BSDDISTROS\FreeBSD\root\WSBSD FreeBSD 14.3\WSBSD FreeBSD 14.3\bin\Debug\WSBSD FreeBSD 14.3.pdb" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.AutorunComponent">
     <ROW VerbKey="0" Type="1" Order="0" Text="Install [|ProductName]"/>
@@ -156,11 +156,11 @@
     <ROW Dialog_="BSDDistroSelection" Control="Description" Type="Text" X="25" Y="23" Width="280" Height="15" Attributes="196611" Text="Choose A BSD Distro/Version" Order="700"/>
     <ROW Dialog_="BSDDistroSelection" Control="Logo" Type="Text" X="4" Y="228" Width="70" Height="12" Attributes="1" Text="Advanced Installer" Order="800"/>
     <ROW Dialog_="BSDDistroSelection" Control="Title" Type="Text" X="15" Y="6" Width="200" Height="15" Attributes="196611" Text="BSD Distro Selection" TextStyle="[DlgTitleFont]" Order="900"/>
-    <ROW Dialog_="BSDDistroSelection" Control="PushButton_1" Type="PushButton" X="86" Y="63" Width="55" Height="16" Attributes="3" Text="FreeBSD 14.3" Order="1000"/>
+    <ROW Dialog_="BSDDistroSelection" Control="PushButton_1" Type="PushButton" X="86" Y="63" Width="55" Height="16" Attributes="3" Text="FreeBSD 14.2" Order="1000"/>
     <ROW Dialog_="BSDDistroSelection" Control="PushButton_2" Type="PushButton" X="86" Y="92" Width="55" Height="16" Attributes="3" Text="NetBSD 10.1" Order="1100"/>
     <ROW Dialog_="BSDDistroSelection" Control="PushButton_3" Type="PushButton" X="86" Y="122" Width="55" Height="16" Attributes="3" Text="OpenBSD 7.7" Order="1200"/>
     <ROW Dialog_="BSDDistroSelection" Control="Text_1" Type="Text" X="167" Y="127" Width="137" Height="33" Attributes="65539" Property="TEXT_1_PROP" Text="WARNING: You Can Only Pick ONE I Was Running this for Debugging And It turns Out you Can Only pick ONE!" Order="1300"/>
-    <ROW Dialog_="BSDDistroSelection" Control="Text_2" Type="Text" X="200" Y="44" Width="159" Height="11" Attributes="65539" Property="TEXT_2_PROP" Text="Latest WSBSD Releases For WSBSD 1.0.0.4-5" Order="1400"/>
+    <ROW Dialog_="BSDDistroSelection" Control="Text_2" Type="Text" X="220" Y="44" Width="150" Height="11" Attributes="65539" Property="TEXT_2_PROP" Text="Latest WSBSD Releases For WSBSD 1.0.0.3" Order="1400"/>
     <ROW Dialog_="BSDDistroSelection" Control="PushButton_4" Type="PushButton" X="86" Y="150" Width="55" Height="16" Attributes="3" Text="DragonFly 6.4.2" Order="1500"/>
     <ROW Dialog_="BSDDistroSelection" Control="PushButton_5" Type="PushButton" X="86" Y="187" Width="55" Height="16" Attributes="3" Text="MidnightBSD 3.2.3" Order="1600"/>
   </COMPONENT>
@@ -225,7 +225,7 @@
     <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
     <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
     <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
-    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:C:\WSBSD#CDDVDBuild:C:\WSBSD"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:C:\#CDDVDBuild:C:\"/>
     <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]" MultiBuildTarget="DefaultBuild:C:\[WSBSD_Dir]#CDDVDBuild:C:\[WSBSD_Dir]"/>
     <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
   </COMPONENT>
@@ -233,7 +233,7 @@
     <ROW Dialog="BSDDistroSelection" HCentering="50" VCentering="50" Width="370" Height="270" Attributes="3" Title="[ProductName] [Setup]" Control_Default="Next" Control_Cancel="Cancel"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiEnvComponent">
-    <ROW Environment="Path" Name="=-Path" Value="[~]\[root_Dir]" Component_="AI_ExePath"/>
+    <ROW Environment="Path" Name="=-Path" Value="[~]\[root_Dir]" Component_="WSBSDFreeBSDDefault14.2.exe"/>
     <ROW Environment="Path_1" Name="=-Path" Value="[~]\[root_2_Dir]" Component_="WSBSDOpenBSD7.7.exe"/>
     <ROW Environment="Path_2" Name="=-Path" Value="[~]\[root_1_Dir]" Component_="WSBSDNetBSD10.1.exe"/>
     <ROW Environment="Path_3" Name="=-Path" Value="[~]\[root_3_Dir]" Component_="WSBSDDragonBSD6.4.2.exe"/>
@@ -250,12 +250,12 @@
     <ROW Feature_="MainFeature" Component_="WSBSDOpenBSD7.7.exe.config"/>
     <ROW Feature_="MainFeature" Component_="Uninstall"/>
     <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
+    <ROW Feature_="MainFeature" Component_="WSBSDFreeBSDDefault14.2.exe"/>
+    <ROW Feature_="MainFeature" Component_="WSBSDFreeBSDDefault14.2.exe.config"/>
     <ROW Feature_="MainFeature" Component_="WSBSDDragonBSD6.4.2.exe"/>
     <ROW Feature_="MainFeature" Component_="WSBSDDragonBSD6.4.2.exe.config"/>
     <ROW Feature_="MainFeature" Component_="WSBSDMidnightBSD3.6.2.exe"/>
     <ROW Feature_="MainFeature" Component_="WSBSDMidnightBSD3.6.2.exe.config"/>
-    <ROW Feature_="MainFeature" Component_="WSBSDFreeBSD14.3.exe"/>
-    <ROW Feature_="MainFeature" Component_="WSBSDFreeBSD14.3.exe.config"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
     <ROW Name="SystemFoldermsiexec.exe" SourcePath="&lt;AI_RES&gt;uninstall.ico" Index="0"/>
@@ -318,8 +318,6 @@
     <ROW Shortcut="UninstallProductNameProductVersion" Directory_="Uninstall_Dir" Name="UNINST~1.3|Uninstall [|ProductName] [|ProductVersion]" Component_="WSBSDOpenBSD7.7.exe" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Hotkey="0" Icon_="SystemFoldermsiexec.exe" IconIndex="0" ShowCmd="1"/>
     <ROW Shortcut="WSBSDDragonFly6.4.2" Directory_="DesktopFolder" Name="WSBSDD~1.2|WSBSD DragonFly 6.4.2" Component_="WSBSDDragonBSD6.4.2.exe" Target="[#WSBSDDragonBSD6.4.2.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="root_3_Dir"/>
     <ROW Shortcut="WSBSDDragonFly6.4.2_1" Directory_="StartMenuFolder" Name="WSBSDD~1.2|WSBSD DragonFly 6.4.2" Component_="WSBSDDragonBSD6.4.2.exe" Target="[#WSBSDDragonBSD6.4.2.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="root_3_Dir"/>
-    <ROW Shortcut="WSBSDFreeBSD14.3" Directory_="DesktopFolder" Name="WSBSDF~1.3|WSBSD FreeBSD 14.3" Component_="WSBSDFreeBSD14.3.exe" Target="[#WSBSDFreeBSD14.3.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="root_Dir"/>
-    <ROW Shortcut="WSBSDFreeBSD14.3_1" Directory_="StartMenuFolder" Name="WSBSDF~1.3|WSBSD FreeBSD 14.3" Component_="WSBSDFreeBSD14.3.exe" Target="[#WSBSDFreeBSD14.3.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="root_Dir"/>
     <ROW Shortcut="WSBSDMidnightBSD3.2.3" Directory_="DesktopFolder" Name="WSBSDM~1.3|WSBSD MidnightBSD 3.2.3" Component_="WSBSDMidnightBSD3.6.2.exe" Target="[#WSBSDMidnightBSD3.6.2.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="root_4_Dir"/>
     <ROW Shortcut="WSBSDMidnightBSD3.2.3_1" Directory_="StartMenuFolder" Name="WSBSDM~1.3|WSBSD MidnightBSD 3.2.3" Component_="WSBSDMidnightBSD3.6.2.exe" Target="[#WSBSDMidnightBSD3.6.2.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="root_4_Dir"/>
     <ROW Shortcut="WSBSDNetBSD10.1" Directory_="DesktopFolder" Name="WSBSDN~1.1|WSBSD NetBSD 10.1" Component_="WSBSDNetBSD10.1.exe" Target="[#WSBSDNetBSD10.1.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="root_1_Dir"/>
