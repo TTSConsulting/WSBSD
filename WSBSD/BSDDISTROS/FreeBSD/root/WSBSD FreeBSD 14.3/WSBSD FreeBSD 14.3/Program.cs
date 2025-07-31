@@ -284,7 +284,7 @@ class Program
         Uptime: {GetUptime()}
         Shell: sh (Unix V7, 1979)
         CPU: {GetCPUInfo()}
-        RAM: {GetRAMInfo()} GB" + "\u001b[0m";
+        RAM: {GetRAMInfo()}" + "\u001b[0m";
 
 
         // 🛠️ **Updated printing method to prevent buffer overload**
