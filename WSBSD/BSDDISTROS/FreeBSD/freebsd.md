@@ -11,7 +11,7 @@ Checked = The Version Is Supported
 Unchecked = The Version Is Not Supported
 
 - [x] FreeBSD 14.2
-- [ ] FreeBSD 14.3
+- [x] FreeBSD 14.3
 - [ ] FreeBSD 14.4
 - [ ] FreeBSD 14.5
 - [ ] FreeBSD 14.6
