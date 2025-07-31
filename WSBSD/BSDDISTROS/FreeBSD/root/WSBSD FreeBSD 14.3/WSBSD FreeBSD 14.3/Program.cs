@@ -50,12 +50,48 @@ class Program
         Thread.Sleep(1000);
         Console.WriteLine("Starting WSBSD  FreeBSD 14-STABLE");
         Thread.Sleep(1000);
-        Console.WriteLine("All Kernels started Now Starting WSBSD FreeBSD 14.2");
+        Console.WriteLine("All Kernels started Now Starting WSBSD FreeBSD 14.3");
         Thread.Sleep(1000);
         Console.WriteLine("FreeBSD Started Booting sh...");
         Thread.Sleep(1000);
         Console.Clear();
-        bool isRoot = false; // Track root status
+        Console.WriteLine($"FreeBSD/amd64 ({Environment.MachineName}) (ttyv0)\n");
+        Console.Write("login: ");
+        string username = Console.ReadLine()?.Trim(); // Read username input
+        bool isRoot; // Track root status       
+        string password = Environment.MachineName; // Set password to the machine name
+        if (username == "root")
+        {
+            Console.Write($"Password: ");
+            string inputPassword = Console.ReadLine()?.Trim(); // Read password input
+            if (inputPassword == $"{Environment.MachineName}")
+            {
+                Console.WriteLine("Login successful.");
+            }
+            else
+            {
+                Console.WriteLine("Incorrect password. Exiting WSBSD terminal.");
+                return; // Exit if the password is incorrect
+            }
+            Console.WriteLine($"Welcome,  root");
+            isRoot = true; // Set IsRoot to true if the user is root
+        }
+        else
+        {
+            Console.Write($"Password: ");
+            string inputPassword = Console.ReadLine()?.Trim(); // Read password input
+            if (inputPassword == $"{Environment.MachineName}")
+            {
+                Console.WriteLine("Login successful.");
+            }
+            else
+            {
+                Console.WriteLine("Incorrect password. Exiting WSBSD terminal.");
+                return; // Exit if the password is incorrect
+            }
+            Console.WriteLine($"Welcome,  {username}");
+            isRoot = false; // Set IsRoot to false if the user is not root
+        }
         Console.WriteLine($"System Uptime: {GetUptime()}");
         Console.WriteLine("\nPrompt Character Key: $ = Normal User (Standard Users) # = Root User (Administrator Users)");
         while (true)
@@ -64,7 +100,7 @@ class Program
             string homePath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
             string fixedPath = currentDirectory.Replace("\\", "/").Replace("C:/", "/").Replace($"C:\\Users\\{Environment.UserName}", "~" ).Replace("c:/", "/").Replace(homePath.Replace("\\", "/"), "~");
             string prompt = isRoot ? "#" : "$"; // Switch prompt dynamically
-            Console.Write(isRoot ? $"\nroot@{Environment.MachineName}:{fixedPath} {prompt} " : $"\n{Environment.UserName}@{Environment.MachineName}:{fixedPath} {prompt} ");
+            Console.Write(isRoot ? $"\nroot@{Environment.MachineName}: {prompt} " : $"\n{Environment.UserName}@{Environment.MachineName}:{fixedPath} {prompt} ");
             string command = Console.ReadLine()?.Trim();
 
             if (string.IsNullOrWhiteSpace(command))
@@ -243,7 +279,7 @@ class Program
         ------------------------------------------------
         User: {Environment.UserName}
         Machine: {Environment.MachineName}
-        OS: FreeBSD 14.2-RELEASE On {Environment.OSVersion.VersionString} amd64 (x64 or 64 Bits)
+        OS: FreeBSD 14.3-RELEASE On {Environment.OSVersion.VersionString} amd64 (x64 or 64 Bits)
         Kernel: FREEBSDKERNEL: FreeBSD 14-STABLE | BSDKENREL: 4.4BSDLite | UNIXKERNEL: Unix Kernel v7.0 | WSBSDKERNEL: WSBSD1.0.0.4
         Uptime: {GetUptime()}
         Shell: sh (Unix V7, 1979)
