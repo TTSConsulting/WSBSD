@@ -29,7 +29,7 @@ and Next Time Please Make A Specific Version Of The BSD Distro You Want To Add S
 
 IF YOU SEE A WSBSD VERSION BUT NOT ON RELEASES PAGE, IT MEANS IT NOT FINISHED YET AND IT IS IN THE WORKS. (AS OF 5/23/2025)
 
-C# And .exe Files Made Via Visual Studio 2022 17.14.2 Preview 1.0 (AS OF 5/23/2025)
+C# And .exe Files Made Via Visual Studio 2022 17.14.11 Preview 1.0 (AS OF 8/7/2025)
 
 ## History
 
