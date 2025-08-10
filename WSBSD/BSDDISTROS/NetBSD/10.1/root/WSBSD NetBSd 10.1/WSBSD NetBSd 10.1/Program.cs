@@ -58,6 +58,23 @@ class Program
         Thread.Sleep(1000);
         Console.Clear();
         Console.WriteLine($"System Uptime: {GetUptime()}");
+        Console.WriteLine($"NetBSD/amd64 ({Environment.MachineName}) (constty)");
+        Console.Write("login: ");
+        string username = Console.ReadLine()?.Trim(); // Read username input
+        bool IsRoot; // Declare IsRoot variable here
+        string password = Environment.MachineName; // Set password to the machine name
+        if (username == "root")
+        {
+                Console.WriteLine("Login successful.");
+        }
+        else
+        {           
+                Console.WriteLine("Login successful.");
+        }
+        Console.WriteLine("Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003,\n 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013,\n 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023,\n2024, 2025 \nThe NetBSD Foundation, Inc. All Rights Reserved");
+        Console.WriteLine("Copyright (c) 1982, 1986, 1989, 1991, 1993\n The Regents of the University of California. All rights reserved.\n");
+        Console.WriteLine("NetBSD 10.1_STABLE (GENERIC) #0: Fri May 16 05:17:34 UTC 2025\n");
+        Console.WriteLine("Welcome to NetBSD!");
         while (true)
         {
             string currentDirectory = Directory.GetCurrentDirectory();
