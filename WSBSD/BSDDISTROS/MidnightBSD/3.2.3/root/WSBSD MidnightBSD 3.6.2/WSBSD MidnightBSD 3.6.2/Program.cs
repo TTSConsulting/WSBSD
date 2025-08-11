@@ -57,12 +57,27 @@ class Program
         Console.Clear();
         bool isRoot = false; // Track root status
         Console.WriteLine($"System Uptime: {GetUptime()}");
+        Console.WriteLine($"MidnightBSD/amd64 ({Environment.MachineName}) (tty1)");
+        Console.Write("login: ");
+        string username = Console.ReadLine()?.Trim(); // Read username input
+        string password = Environment.MachineName; // Set password to the machine name
+        if (username == "root")
+        {
+            Console.WriteLine("Login successful.");
+            isRoot = true;
+        }
+        else
+        {
+            Console.WriteLine("Login successful.");
+            isRoot = false;
+        }
         Console.WriteLine("\nPrompt Character Key: $ = Normal User (Standard Users) # = Root User (Administrator Users)");
+        Console.WriteLine("MidnightBSD 3.2.3 (GENERIC) #4n13179-47e403ff66(HEAD)-dirty: Thu Apr 10 16:29:43 \n EDT 2025");
         while (true)
         {
             string currentDirectory = Directory.GetCurrentDirectory();
             string fixedPath = currentDirectory.Replace('\\', '/');
-            string prompt = isRoot ? " ROOT#" : " NORMALUSER$"; // Switch prompt dynamically
+            string prompt = isRoot ? "#" : "$"; // Switch prompt dynamically
             Console.Write(isRoot ? $"\n{Environment.UserName}@{Environment.MachineName}:{fixedPath} {prompt} " : $"{Environment.UserName}@{Environment.MachineName}: {fixedPath} {prompt} ");
             string command = Console.ReadLine()?.Trim();
 
@@ -140,12 +155,12 @@ class Program
             }
             else if (command == "root exit")
             {
-                if (isRoot = true)
+                if (isRoot == true)
                 {
                     Console.WriteLine("You Are Now Exiting Root");
                     isRoot = false;
                 }
-                else if (isRoot = false)
+                else if (isRoot == false)
                 {
                     Console.WriteLine("ERROR: NOT IN ROOT MODE!");
                 }
