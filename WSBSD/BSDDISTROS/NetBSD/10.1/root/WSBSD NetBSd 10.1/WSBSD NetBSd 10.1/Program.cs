@@ -66,6 +66,7 @@ class Program
         if (username == "root")
         {
                 Console.WriteLine("Login successful.");
+            IsRoot = true;
         }
         else
         {           

@@ -57,15 +57,33 @@ class Program
         Console.Clear();
         bool isRoot = false; // Track root status
         Console.WriteLine($"System Uptime: {GetUptime()}");
+        Console.WriteLine($"DragonFlyBSD/x86_64 ({Environment.MachineName}) (ttyv0)\n");
+        Console.Write("login: ");
+        string username = Console.ReadLine()?.Trim(); // Read username input
+        string password = Environment.MachineName; // Set password to the machine name
+        if (username == "root")
+        {
+            Console.WriteLine("Login successful.");
+            isRoot = true;
+        }
+        else
+        {
+            Console.WriteLine("Login successful.");
+            isRoot = false;
+        }
         Console.WriteLine("\nPrompt Character Key: $ = Normal User (Standard Users) # = Root User (Administrator Users)");
+        Console.WriteLine("Copyright (c) 2003-2022 The DragonFly Project");
+        Console.WriteLine("Copyright (c) 1992-2003 The FreeBSD Project");
+        Console.WriteLine("Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994 \nThe Regents of the University of California. All rights reserved.");
+        Console.WriteLine("\nDragonBSD v6.4.2-RELEASE (X86_64_GENERIC) #11: Fri May 9 14:08:53 EDT 2025\n");
+        Console.WriteLine("Welcome To DragonFly!");
         while (true)
         {
             string currentDirectory = Directory.GetCurrentDirectory();
-            string fixedPath = currentDirectory.Replace('\\', '/');
-            string prompt = isRoot ? "ROOT#" : "NORMALUSER$"; // Switch prompt dynamically
+            string fixedPath = currentDirectory.Replace('\\', '/').Replace("c:", "").Replace("C:", ""); // Normalize path for Unix-like appearance
+            string prompt = isRoot ? "#" : "$"; // Switch prompt dynamically
             Console.Write(isRoot ? $"{Environment.UserName}@{Environment.MachineName}:{fixedPath} {prompt} " : $"{Environment.UserName}@{Environment.MachineName}:{fixedPath} {prompt} ");
             string command = Console.ReadLine()?.Trim();
-
             if (string.IsNullOrWhiteSpace(command))
                 continue;
 
@@ -84,7 +102,7 @@ class Program
             }
             else if (command == "help")
             {
-                Console.WriteLine("Available commands: neofetch, clear, exit, help, ls, cd, echo, cat, about, pkg install, wine, root (More Commands Are In The Works)");
+                Console.WriteLine("Available commands: neofetch, clear, exit, help, ls, cd, echo, cat, about, pkg install, wine");
             }
             else if (command == "ls")
             {
@@ -125,30 +143,12 @@ class Program
             else if (command.StartsWith("pkg install "))
             {
                 string msi_name = command.Substring(12).Trim();
-                RunCommand($"{currentDirectory}\\{msi_name}.msi");
+                RunCommand($"\"{currentDirectory}\\{msi_name}.msi\"");
             }
             else if (command.StartsWith("wine "))
             {
                 string exe_name = command.Substring(5).Trim();
                 RunCommand($"{currentDirectory}\\{exe_name}.exe");
-            }
-            else if (command == "root")
-            {
-                isRoot = true;
-                Console.WriteLine("You are now in root mode.");
-                Thread.Sleep(1000);
-            }
-            else if (command == "root exit")
-            {
-                if (isRoot = true)
-                {
-                    Console.WriteLine("You Are Now Exiting Root");
-                    isRoot = false;
-                }
-                else if (isRoot = false)
-                {
-                    Console.WriteLine("ERROR: NOT IN ROOT MODE!");
-                }
             }
             else
             {
